@@ -78,6 +78,49 @@ nav{
     outline: none;
 }
 
+.input-control input:focus{
+    outline: 0;
+}
+
+.input-control.success input{
+    border-color: #09c372;
+}
+
+.input-control.error input{
+    border-color: #ff3860;
+}
+
+.input-control .error{
+    color: #ff3860;
+    font-size: 9px;
+    height: 13px;
+}
+
+.password1{
+    position: relative;
+}
+
+span #eye1{
+    color: hsl(218, 28%, 13%);
+    position: absolute;
+    right: 15px;
+    transform: translate(0, -50%);
+    top: 70%;
+    box-sizing: border-box;
+}
+
+.password{
+    position: relative;
+}
+
+span #eye{
+    color: hsl(218, 28%, 13%);
+    position: absolute;
+    right: 15px;
+    transform: translate(0, -50%);
+    top: 70%;
+    box-sizing: border-box;
+}
 
 @media screen and (max-width: 767px) {
     header{
