@@ -20,7 +20,7 @@ body{
 header{
     background-color: hsl(217, 28%, 15%);
     background-image: url('images/bg-curvy-desktop.svg');
-    background-size: contain;
+    background-size: cover;
     background-repeat: no-repeat;
     background-position: left bottom;
     padding-bottom: 80px;
@@ -65,6 +65,11 @@ nav{
     text-decoration: none;
 }
 
+.nav-ul li:hover a{
+    border-bottom: 1px solid #fff;
+    padding-bottom: 10px;
+}
+
 .hamburger{
     display: none;
     background-color: transparent;
@@ -100,7 +105,7 @@ nav{
     position: relative;
 }
 
-span #eye1{
+span .hide-1{
     color: hsl(218, 28%, 13%);
     position: absolute;
     right: 15px;
@@ -109,26 +114,50 @@ span #eye1{
     box-sizing: border-box;
 }
 
+span .hide-2{
+    color: hsl(218, 28%, 13%);
+    position: absolute;
+    right: 15px;
+    transform: translate(0, -50%);
+    top: 70%;
+    box-sizing: border-box;
+    display: none;
+}
 .password{
     position: relative;
 }
 
-span #eye{
+span .hide-3{
     color: hsl(218, 28%, 13%);
     position: absolute;
     right: 15px;
     transform: translate(0, -50%);
     top: 70%;
     box-sizing: border-box;
+}
+
+span .hide-4{
+    color: hsl(218, 28%, 13%);
+    position: absolute;
+    right: 15px;
+    transform: translate(0, -50%);
+    top: 70%;
+    box-sizing: border-box;
+    display: none;
+}
+
+.error{
+    color: red;
+    font-size: 12px;
 }
 
 @media screen and (max-width: 767px) {
     header{
         background-color: hsl(217, 28%, 15%);
         background-image: url('images/bg-curvy-mobile.svg');
-        background-size: contain;
+        background-size: cover;
         background-repeat: no-repeat;
-        background-position: left bottom;
+        background-position: bottom;
         padding-bottom: 80px;
     }
 
@@ -143,6 +172,11 @@ span #eye{
         padding: 10px 0;
     }
 
+    .nav-ul li:hover a{
+        border-right: 1px solid #fff;
+        padding-right: 10px;
+    }
+    
     .nav-ul.show{
         display: flex;
     }
