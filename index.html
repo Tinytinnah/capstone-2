@@ -9,7 +9,7 @@
     <link rel="stylesheet" href="css/fontawesome.min.css">
     <link rel="stylesheet" href="css/bootstrap.min.css">
     <link rel="stylesheet" href="style.css">
-    <title>Document</title>
+    <title>Nav and <Form></Form></title>
 </head>
 <body>
     <header>
@@ -45,7 +45,7 @@
                 </div>
                 <div class="mb-3 password1 input-control">
                   <label for="exampleInputPassword1" class="form-label">Password</label>
-                  <input type="password" class="form-control" id="InputPassword1">
+                  <input type="password" class="form-control" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}" id="InputPassword1"  title="Must contain at least one number and one uppercase and lowercase letter, and at least 8 or more characters" required>
                   <span>
                     <i class="fa-solid fa-eye hide-1" id="hide1"></i>
                     <i class="fa-solid fa-eye-slash hide-2" id="hide2"></i>
@@ -59,9 +59,15 @@
                     <i class="fa-solid fa-eye hide-3" id="hide3"></i>
                     <i class="fa-solid fa-eye-slash hide-4" id="hide4"></i>
                   </span>
-                  <p class="error2" id="error2"></p>
+                  <div id="message">
+                    <h3>Password must contain the following:</h3>
+                    <p id="letter" class="invalid">A <b>lowercase</b> letter</p>
+                    <p id="capital" class="invalid">A <b>capital (uppercase)</b> letter</p>
+                    <p id="number" class="invalid">A <b>number</b></p>
+                    <p id="length" class="invalid">Minimum <b>8 characters</b></p>
+                  </div>
                 </div>
-                <button type="submit" class="btn btn-primary">Submit</button>
+                <button type="submit" class="btn btn-primary" id="submit">Submit</button>
               </form>
 
               

@@ -6,17 +6,17 @@ hamburger.addEventListener('click', (e) => {
 });
 
 const z = document.querySelector('#InputPassword1');
-const x = document.querySelector('#hide1');
+const myInput = document.querySelector('#hide1');
 const y = document.querySelector('#hide2');
 
-x.addEventListener('click', (e) => {
+myInput.addEventListener('click', (e) => {
     if (z.type === 'password') {
         z.type = 'text';
-        x.style.display = 'block';
+        myInput.style.display = 'block';
         y.style.display = 'none';
     } else {
         z.type = 'password';
-        x.style.display = 'none';
+        myInput.style.display = 'none';
         y.style.display = 'block';
     }
 });
@@ -24,11 +24,11 @@ x.addEventListener('click', (e) => {
 y.addEventListener('click', (e) => {
     if (z.type === 'password') {
         z.type = 'text';
-        x.style.display = 'block';
+        myInput.style.display = 'block';
         y.style.display = 'none';
     } else {
         z.type = 'password';
-        x.style.display = 'none';
+        myInput.style.display = 'none';
         y.style.display = 'block';
     }
 });
@@ -61,30 +61,51 @@ c.addEventListener('click', (e) => {
     }
 });
 
-const etError = (Element, message) => {
-    const inControl = Element.parentElement;
-    const errDisplay =inControl.querySelector('.error');
-}
+const submit = document.querySelector('#submit');
 
-const form = document.querySelector('#form');
-const err1 = document.querySelector('#error1');
-const err2 = document.querySelector('error2');
-const email = document.querySelector('#email');
+let letter = document.getElementById("letter");
+let capital = document.getElementById("capital");
+let number = document.getElementById("number");
+let length = document.getElementById("length");
 
-form.addEventListener('submit', e => {
-    e.preventDefault();
-
-    validateInputs();
-});
-
-const validateInputs = (e) => {
-    const emailValue = email.value.trim();
-    const passwordValue = x.value.trim();
-    const password2Value = y.value.trim();
+  // When the user starts to type something inside the password field
+  myInput.onkeyup = function() {
+    // Validate lowercase letters
+    const lowerCaseLetters = /[a-z]/g;
+    if(myInput.value.match(lowerCaseLetters)) {  
+      letter.classList.remove("invalid");
+      letter.classList.add("valid");
+    } else {
+      letter.classList.remove("valid");
+      letter.classList.add("invalid");
+    }
+    
+    // Validate capital letters
+    const upperCaseLetters = /[A-Z]/g;
+    if(myInput.value.match(upperCaseLetters)) {  
+      capital.classList.remove("invalid");
+      capital.classList.add("valid");
+    } else {
+      capital.classList.remove("valid");
+      capital.classList.add("invalid");
+    }
+  
+    // Validate numbers
+    const numbers = /[0-9]/g;
+    if(myInput.value.match(numbers)) {  
+      number.classList.remove("invalid");
+      number.classList.add("valid");
+    } else {
+      number.classList.remove("valid");
+      number.classList.add("invalid");
+    }
+    
+    // Validate length
+    if(myInput.value.length >= 8) {
+      length.classList.remove("invalid");
+      length.classList.add("valid");
+    } else {
+      length.classList.remove("valid");
+      length.classList.add("invalid");
+    }
 };
-
-// if (emailValue ==== '' ) {
-//     email    
-// }
-
-

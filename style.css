@@ -106,7 +106,7 @@ nav{
 }
 
 span .hide-1{
-    color: hsl(218, 28%, 13%);
+    color: hsl(217, 36%, 20%);
     position: absolute;
     right: 15px;
     transform: translate(0, -50%);
@@ -115,7 +115,7 @@ span .hide-1{
 }
 
 span .hide-2{
-    color: hsl(218, 28%, 13%);
+    color: hsl(217, 28%, 15%);
     position: absolute;
     right: 15px;
     transform: translate(0, -50%);
@@ -128,7 +128,7 @@ span .hide-2{
 }
 
 span .hide-3{
-    color: hsl(218, 28%, 13%);
+    color: hsl(217, 36%, 20%);
     position: absolute;
     right: 15px;
     transform: translate(0, -50%);
@@ -137,7 +137,7 @@ span .hide-3{
 }
 
 span .hide-4{
-    color: hsl(218, 28%, 13%);
+    color: hsl(217, 28%, 15%);
     position: absolute;
     right: 15px;
     transform: translate(0, -50%);
@@ -150,6 +150,42 @@ span .hide-4{
     color: red;
     font-size: 12px;
 }
+
+#message {
+    display:none;
+    background: #f1f1f1;
+    color: #000;
+    position: relative;
+    padding: 20px;
+    margin-top: 10px;
+  }
+
+  #message p {
+    padding: 10px 35px;
+    font-size: 18px;
+  }
+  
+  /* .valid {
+    color: green;
+  }
+  
+  .valid:before {
+    position: relative;
+    left: -35px;
+    content: "✔";
+  }
+   */
+  /* Add a red text color and an "x" when the requirements are wrong */
+  /* .invalid {
+    color: red;
+  }
+  
+  .invalid:before {
+    position: relative;
+    left: -35px;
+    content: "✖";
+  } */
+  
 
 @media screen and (max-width: 767px) {
     header{
